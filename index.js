@@ -6,7 +6,7 @@ const sendData = (url, method, data) =>
     headers: {
       "Content-type": "application/json;charset=UTF-8",
     },
-  }).then((respone) => respone.ok);
+  }).then((respone) => respone.json());
 const getData = (url) => fetch(url).then((respone) => respone.json());
 
 getData("db.json")
